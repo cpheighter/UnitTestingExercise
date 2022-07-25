@@ -13,53 +13,66 @@ namespace UnitTestingExercise.Tests
 
             //Arrange
             // create a Calculator object
-            
+            Calculator calculator = new Calculator();
 
             //Act
                 // call the Add method that is located in the Calculator class
                 // and store its result in a variable named actual
+                calculator.Add(num1, num2, num3);
 
             //Assert
                 //Assert.Equal(expected, actual);
+                Assert.Equal(expected, calculator.Add(num1, num2, num3));
+
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(10, 5, 5)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
             //Arrange
+            Calculator calculator = new Calculator();
+            
 
             //Act
+            calculator.Subtract(minuend, subtrhend);
 
             //Assert
+            Assert.Equal(expected, calculator.Subtract(minuend, subtrhend));
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(9, 11, 99)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:
 
             //Arrange
+            Calculator calculator = new Calculator();
 
             //Act
+            calculator.Multiply(num1, num2);
 
             //Assert
+            Assert.Equal(expected, calculator.Multiply(num1, num2));
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(54, 6, 9)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
             //Arrange
+            Calculator calculator = new Calculator();
 
             //Act
+            calculator.Divide(num1, num2);
 
             //Assert
+            Assert.Equal(expected, calculator.Divide(num1, num2));
 
         }
 
