@@ -18,11 +18,11 @@ namespace UnitTestingExercise.Tests
             //Act
                 // call the Add method that is located in the Calculator class
                 // and store its result in a variable named actual
-                calculator.Add(num1, num2, num3);
+               var actual = calculator.Add(num1, num2, num3);
 
             //Assert
                 //Assert.Equal(expected, actual);
-                Assert.Equal(expected, calculator.Add(num1, num2, num3));
+                Assert.Equal(expected, actual);
 
         }
 
@@ -37,10 +37,10 @@ namespace UnitTestingExercise.Tests
             
 
             //Act
-            calculator.Subtract(minuend, subtrhend);
+            var actual = calculator.Subtract(minuend, subtrhend);
 
             //Assert
-            Assert.Equal(expected, calculator.Subtract(minuend, subtrhend));
+            Assert.Equal(expected, actual);
 
         }
 
@@ -54,10 +54,10 @@ namespace UnitTestingExercise.Tests
             Calculator calculator = new Calculator();
 
             //Act
-            calculator.Multiply(num1, num2);
+            var actual = calculator.Multiply(num1, num2);
 
             //Assert
-            Assert.Equal(expected, calculator.Multiply(num1, num2));
+            Assert.Equal(expected, actual);
 
         }
 
@@ -69,10 +69,10 @@ namespace UnitTestingExercise.Tests
             Calculator calculator = new Calculator();
 
             //Act
-            calculator.Divide(num1, num2);
+            var actual = calculator.Divide(num1, num2);
 
             //Assert
-            Assert.Equal(expected, calculator.Divide(num1, num2));
+            Assert.Equal(expected, actual);
 
         }
 
